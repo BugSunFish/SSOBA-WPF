@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ssoba_library.Components;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,9 @@ namespace ssoba
         public MainWindow()
         {
             InitializeComponent();
+            RAM ram = new RAM();
+            textBox1.DataContext = ram;
+            ram.data = 6;
         }
     }
 }

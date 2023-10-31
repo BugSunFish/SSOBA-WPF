@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBox x:Name="textBox1" Text="{Binding Path=ViewData, Mode=TwoWay}" Margin="64,54,400,181" />
+        <TextBox x:Name="textBox2" Text="{Binding Path=PropertyTwo, Mode=TwoWay}" Margin="400,54,89,181" />
     </Grid>
 </Window>
