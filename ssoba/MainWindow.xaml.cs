@@ -1,4 +1,5 @@
 ﻿using ssoba_library.Components;
+using ssoba_library.Instruments;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace ssoba
 {
     /// <summary>
@@ -25,9 +27,14 @@ namespace ssoba
         public MainWindow()
         {
             InitializeComponent();
-            RAM ram = new RAM();
-            textBox1.DataContext = ram;
-            ram.data = 6;
+
+            Register reg1 = new Register();
+            Register reg2 = new Register();
+            DependencyNode reg2_reg1 = new DependencyNode(reg1, reg2);
+
+            reg1.data = 5;
+            reg2_reg1.Run();
+            MessageBox.Show(reg2.ViewData);
         }
     }
 }

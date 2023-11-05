@@ -7,7 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ssoba_library.Components
 {
-    internal class Operational_Block
+    public class Operational_Block
     {
         public string ViewData { get { return Convert.ToString(result, 2); } }
         public int x
